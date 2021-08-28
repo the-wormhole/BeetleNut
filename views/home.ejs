@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Beetle Nut Enterprises || Dashboard</h1>
+
+    <div id="New-Shipment-form">
+        <hr>
+            <form action="/shipment/create" method="POST">
+
+                    Shipement Id:<input type="text" name="ShipId"placeholder="Enter Shipment Id...." required><br>
+
+                    Logistics Service Provider:<td colspan="2"><input type ="text" name="LogisticsName" placeholder="Enter name of Logistics Service Provider...." required style="width:300px"><br>
+                    Order Id:<input type="text" name="OrderId"placeholder="Enter the Order Id" required><br>
+
+                <p>
+                        <button type="submit">Submit</button>
+                </p>
+            </form>
+    </div>
+    <hr>
+    <h2> Shipment History</h2>
+    <hr>
+    <div id="shipments-container">
+        <ul>
+            <li style="display: flex;justify-content: space-around;">
+                <h3 style="background-color: crimson; color: white;">Shipement Id </h3>
+                <h3 style="background-color: crimson; color: white;">Logistics Name</h3>
+                <h3 style="background-color: crimson; color: white;">Order Id(tracking number) </h3>
+                <h3 style="background-color: crimson; color: white;"></h3>
+            </li>
+            <% for(let shipment of shipments){%>
+            <li style="display: flex;justify-content: space-around;">
+                <div><%=shipment.ShipId%></div>
+                <div><%=shipment.LogisticsName%></div>
+                <div><%=shipment.OrderId%></div>
+                <div><a href="/tracking/<%= shipment.OrderId%>"><button type="submit" >Track Order</button></a></div>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+</html>
