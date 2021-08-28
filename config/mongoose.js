@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://NayanAgarwal:9643859794na@cluster0.dptyy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/BeetleNut",{useUnifiedTopology: true}); ///<<<<<--------- to resolve deprecation warning being displayed on the terminal
+mongoose.connect("mongodb+srv://NayanAgarwal:9643859794na@cluster0.dptyy.mongodb.net/myFirstDatabase?retryWrites=true",{useUnifiedTopology: true}); ///<<<<<--------- to resolve deprecation warning being displayed on the terminal
 
 //mongodb://localhost/BeetleNut
 //mongodb+srv://NayanAgarwal:<password>@cluster0.dptyy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
