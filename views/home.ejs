@@ -25,22 +25,23 @@
     <h2> Shipment History</h2>
     <hr>
     <div id="shipments-container">
-        <ul>
-            <li style="display: flex;justify-content: space-around;">
-                <h3 style="background-color: crimson; color: white;">Shipement Id </h3>
-                <h3 style="background-color: crimson; color: white;">Logistics Name</h3>
-                <h3 style="background-color: crimson; color: white;">Order Id(tracking number) </h3>
-                <h3 style="background-color: crimson; color: white;"></h3>
-            </li>
+
+        <table border="1">
+            <tr>
+                <th>Shipement Id </th>
+                <th>Logistics Name</th>
+                <th>Order Id(tracking number) </th>
+                <td></td>
+            </tr>
             <% for(let shipment of shipments){%>
-            <li style="display: flex;justify-content: space-around;">
-                <div><%=shipment.ShipId%></div>
-                <div><%=shipment.LogisticsName%></div>
-                <div><%=shipment.OrderId%></div>
-                <div><a href="/tracking/<%= shipment.OrderId%>"><button type="submit" >Track Order</button></a></div>
-            </li>
+                <tr>
+                    <td><%=shipment.ShipId%></td>
+                    <td><%=shipment.LogisticsName%></td>
+                    <td><%=shipment.OrderId%></td>
+                    <td><a href="/tracking/<%= shipment.OrderId%>"><button type="submit" >Track Order</button></a></td>
+                </tr>
             <% } %>
-        </ul>
+        </table>
     </div>
 </body>
 </html>
