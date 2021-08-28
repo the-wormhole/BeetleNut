@@ -28,16 +28,16 @@
 
         <table border="1">
             <tr>
-                <th>Shipement Id </th>
-                <th>Logistics Name</th>
-                <th>Order Id(tracking number) </th>
+                <th style="background-color:coral; color: white;">Shipement Id </th>
+                <th style="background-color:coral; color: white;">Logistics Name</th>
+                <th style="background-color:coral; color: white;">Order Id(tracking number) </th>
                 <td></td>
             </tr>
             <% for(let shipment of shipments){%>
                 <tr>
-                    <td><%=shipment.ShipId%></td>
-                    <td><%=shipment.LogisticsName%></td>
-                    <td><%=shipment.OrderId%></td>
+                    <td style="background-color:crimson; color:white"><%=shipment.ShipId%></td>
+                    <td style="background-color:crimson; color:white"><%=shipment.LogisticsName%></td>
+                    <td style="background-color:crimson; color:white"><%=shipment.OrderId%></td>
                     <td><a href="/tracking/<%= shipment.OrderId%>"><button type="submit" >Track Order</button></a></td>
                 </tr>
             <% } %>

@@ -7,6 +7,7 @@
     <title>Track order</title>
 </head>
 <body>
+    <h2>Shipement Details</h2>
     <ul>
         <li>Tracking Id : <%= track%></li>
         <li>Shipement Id: <%= orderdetails.shipmentId%></li>
@@ -14,6 +15,7 @@
         <li>Current Status: <%= orderdetails.status %></li>
         <li>Status at: <%= orderdetails.Datetime %></li>
         <li>Logistics Service Provider: <%= orderdetails.service %></li>
-    </ul>
+    </ul><br>
+    <a href="/tracking/excel/<%= track%>"><button type="submit">Download excel</button></a>
 </body>
 </html>

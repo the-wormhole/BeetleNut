@@ -7,4 +7,6 @@ router.get('/',homeController.home);
 router.post('/shipment/create',homeController.create);
 
 router.get('/tracking/:id',homeController.track);
+
+router.get('/tracking/excel/:id',homeController.print);
 module.exports = router;
